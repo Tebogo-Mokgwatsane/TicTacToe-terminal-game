@@ -1,6 +1,6 @@
 # TicTacToe (1s and 0s)
 
-A C++ terminal-based TicTacToe game that uses 1s and 0s instead of Xs and Os.
+A C++ 2 player terminal-based TicTacToe game that uses 1s and 0s instead of Xs and Os.
 
 ## How to run and play through terminal
 ```bash
