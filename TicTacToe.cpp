@@ -1,6 +1,7 @@
 #include "TicTacToe.h"
 #include <string>
 #include <iostream>
+#include <limits>
 
 int playGame()
 {
@@ -78,6 +79,20 @@ int askPlayerForPosition(std::string board, char symbol)
     std::cout << prettyPrint(board) << std::endl;
 
     int res = -1;
-    std::cin >> res;
-    return res-1;
+    while (!(std::cin >> res) || res < 1 || res > 9) {
+        if(std::cin.fail())
+        {
+        std::cin.clear(); // Clear possible error state
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+        std::cout << "Invalid input. Please enter a number:\n";
+        }
+        else if (res < 1 || res > 9) {
+        std::cout << "Invalid input. Please enter a number between 1 and 9(inclusive):\n";
+        } 
+        else 
+        {
+        std::cout << "Invalid input.\n";
+        }
+    }
+    return res - 1;
 }

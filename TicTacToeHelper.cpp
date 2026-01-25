@@ -28,6 +28,9 @@ std::string prettyPrint(std::string board)
 
 bool isValidMove(std::string board, int position)
 {
+    if (position < 0 || position >= 9) {
+        return false;
+    }
     return board[position] == ' ';
 }
 
@@ -38,6 +41,7 @@ bool isInValidMove(std::string board, int position)
 
 bool isPlayerTurn(int turnCount, char symbol)
 {
+    if (symbol != '0' && symbol != '1') return false;//Incase of bugged symbol
     int convertedSymbol = symbol - '0';
     int temp = turnCount % 2;
     return temp != convertedSymbol;
