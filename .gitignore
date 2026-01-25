@@ -5,5 +5,5 @@ main
 # Precompiled headers
 *.gch
 
-# VS Code settings (Can remove)
-.vscode/
+# VS Code settings
+.vscode
