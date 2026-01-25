@@ -1,0 +1,9 @@
+# Compiled binaries
+main
+*.exe
+
+# Precompiled headers
+*.gch
+
+# VS Code settings (Can remove)
+.vscode/
